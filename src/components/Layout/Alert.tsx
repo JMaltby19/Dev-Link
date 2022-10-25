@@ -9,12 +9,12 @@ export const Alert = () => {
 	const alerts = useAppSelector((state) => state.alerts);
 
 	return (
-		<div className=" max-w-screen-lg flex justify-center align-middle">
+		<div className=" max-w-screen-2xl flex justify-center">
 			{alerts !== null &&
 				alerts.length > 0 &&
 				alerts.map((alert) => (
 					<div
-						className={` w-full h-12 text-2xl text-slate-100 bg-cyan-700 absolute flex justify-center items-center mt-24 ${alert.alertType}`}
+						className={` w-full h-12 text-2xl text-slate-100 bg-green-600 absolute text-center mt-24 ${alert.alertType}`}
 						key={alert.id}
 					>
 						{alert.msg}

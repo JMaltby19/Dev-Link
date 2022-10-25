@@ -73,11 +73,11 @@ export const getAllProfiles = () => async (dispatch: Dispatch<ActionTypes>) => {
 };
 
 export const getProfileById =
-	(userId: string) => async (dispatch: Dispatch<ActionTypes>) => {
+	(user_id: string) => async (dispatch: Dispatch<ActionTypes>) => {
 		dispatch({ type: CLEAR_PROFILE });
 		try {
 			const res = await axios.get(
-				`http://localhost:6001/api/profile/user${userId}`
+				`http://localhost:6001/api/profile/user/${user_id}`
 			);
 
 			dispatch({

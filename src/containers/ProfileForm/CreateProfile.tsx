@@ -56,8 +56,8 @@ export const CreateProfile = () => {
 	return (
 		<div className="w-full h-full">
 			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col mt-24">
-				<div className="flex flex-col justify-center items-center">
-					<h1>Create your Profile</h1>
+				<div className="flex flex-col justify-center items-center text-[#e8e8e8]">
+					<h1 className="text-lg font-medium">Create your Profile</h1>
 					<p>
 						Please enter your details below and lets help make your profile
 						stand out!
@@ -65,8 +65,10 @@ export const CreateProfile = () => {
 					<small>* required field</small>
 					<form
 						onSubmit={onSubmit}
-						className="flex flex-col justify-center align-middle py-2 w-3/5"
+						className="flex flex-col justify-center align-middle py-2 w-3/5 text-black"
 					>
+						<small className="text-[#e8e8e8] py-2">*Current position </small>
+
 						<select name="status" value={status} onChange={onChange}>
 							<option value="0">* Select status</option>
 							<option value="Graduate">Graduate</option>
@@ -78,6 +80,9 @@ export const CreateProfile = () => {
 							<option value="Intern">Intern</option>
 							<option value="Other">Other</option>
 						</select>
+						<small className="text-[#e8e8e8] py-2">
+							Which Company are you currently working at
+						</small>
 						<input
 							type="text"
 							placeholder="Company"
@@ -86,6 +91,9 @@ export const CreateProfile = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">
+							Do you have a website?
+						</small>
 						<input
 							type="text"
 							placeholder="Website"
@@ -94,6 +102,9 @@ export const CreateProfile = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">
+							Where are you located?
+						</small>
 						<input
 							type="text"
 							placeholder="Location"
@@ -102,6 +113,9 @@ export const CreateProfile = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">
+							*What tech skills do you possess?
+						</small>
 						<input
 							type="text"
 							placeholder="* Skills"
@@ -110,6 +124,9 @@ export const CreateProfile = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">
+							Do you have a GitHub account?
+						</small>
 						<input
 							type="text"
 							placeholder="Github Username"
@@ -118,6 +135,9 @@ export const CreateProfile = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">
+							Tell us a bit about yourself
+						</small>
 						<textarea
 							name="bio"
 							placeholder="A short description of yourself"
@@ -128,7 +148,7 @@ export const CreateProfile = () => {
 						<div className="z-30 flex flex-row justify-center items-center mx-auto">
 							<button
 								type="button"
-								className=" z-30 flex justify-center items rounded-sm my-2 py-2 mx-2 bg-slate-500 text-white border-2 w-32 h-12"
+								className=" z-30 flex justify-center items rounded-3xl my-2 py-2 mx-2 bg-[#54a7ff] hover:bg-[#54a7ff78] w-32 h-10"
 								onClick={() => setToggleSocials(!toggleSocials)}
 							>
 								Add socials
@@ -136,6 +156,8 @@ export const CreateProfile = () => {
 						</div>
 						{toggleSocials && (
 							<div className="flex flex-col justify-center align-middle py-2 w-full">
+								<small className="text-[#e8e8e8] py-2">LinkedIn</small>
+
 								<input
 									type="text"
 									placeholder="LinkedIn"
@@ -144,6 +166,8 @@ export const CreateProfile = () => {
 									onChange={onChange}
 									className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 								/>
+								<small className="text-[#e8e8e8] py-2">Instagram </small>
+
 								<input
 									type="text"
 									placeholder="Instagram"
@@ -152,6 +176,8 @@ export const CreateProfile = () => {
 									onChange={onChange}
 									className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 								/>
+								<small className="text-[#e8e8e8] py-2">Twitter</small>
+
 								<input
 									type="text"
 									placeholder="Twitter"
@@ -164,7 +190,7 @@ export const CreateProfile = () => {
 						)}
 						<button
 							type="submit"
-							className="flex justify-center items rounded-sm my-2 py-2 mx-2 bg-slate-500 text-white border-2 w-32 h-12"
+							className="flex justify-center items rounded-3xl my-2 py-2 mx-2 bg-[#54a7ff] hover:bg-[#54a7ff78] w-32 h-10"
 						>
 							Save
 						</button>

@@ -83,8 +83,9 @@ export const register =
 			} as RegisterSuccessType);
 
 			store.dispatch(loadUser());
-		} catch (err) {
-			alertError(err);
+		} catch (error) {
+			// alertError(error);
+			store.dispatch(setAlert("Invlaid Details", "error"));
 
 			dispatch({
 				type: REGISTER_FAIL,
@@ -118,7 +119,8 @@ export const login =
 			store.dispatch(loadUser());
 			console.log(loadUser);
 		} catch (error: any) {
-			// alertError(err);
+			// alertError(error);
+			store.dispatch(setAlert("Invlaid Details", "error"));
 			// const errors = error.res.data.errors;
 
 			// if (errors) {

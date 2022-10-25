@@ -17,6 +17,7 @@ import { EditProfile } from "./containers/ProfileForm/EditProfile";
 import { AddExperience } from "./containers/ProfileForm/AddExperience";
 import { AddEducation } from "./containers/ProfileForm/AddEducation";
 import { Profiles } from "./containers/Profiles/Profiles";
+import { Profile } from "./containers/Profile/Profile";
 
 if (localStorage.token) {
 	setAuthToken(localStorage.token);
@@ -29,7 +30,7 @@ const App = () => {
 
 	return (
 		<Provider store={store}>
-			<>
+			<div className="min-h-screen bg-[#101e50]">
 				<Nav />
 				<section>
 					<Alert />
@@ -38,9 +39,16 @@ const App = () => {
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/profiles" element={<Profiles />} />
+						<Route path="/profile/:id" element={<Profile />} />
 
-						{/* <Route path="/create-profile" element={<CreateProfile />} /> */}
-						{/* <Route path="/dashboard" element={<Dashboard />} /> */}
+						<Route
+							path="/dashboard"
+							element={
+								<PrivateRoute>
+									<Dashboard />
+								</PrivateRoute>
+							}
+						/>
 						<Route
 							path="/create-profile"
 							element={
@@ -73,17 +81,9 @@ const App = () => {
 								</PrivateRoute>
 							}
 						/>
-						<Route
-							path="/dashboard"
-							element={
-								<PrivateRoute>
-									<Dashboard />
-								</PrivateRoute>
-							}
-						/>
 					</Routes>
 				</section>
-			</>
+			</div>
 		</Provider>
 	);
 };

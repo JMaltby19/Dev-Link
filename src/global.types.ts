@@ -54,7 +54,11 @@ export interface ProfileType {
 	location?: string;
 	status: string;
 	skills: string[];
-	social?: { twitter?: string; linkedin?: string; instagram?: string };
+	social?: {
+		twitter?: string;
+		linkedin?: string;
+		instagram?: string;
+	};
 	experience?: ExperienceType[];
 	education?: EducationType[];
 }
@@ -86,4 +90,5 @@ export interface GithubRepoType {
 	name?: string;
 	full_name?: string;
 	description?: string;
+	html_url: string;
 }

@@ -1,4 +1,3 @@
-import { UserType, AuthType } from "./global.types";
 import { createStore, applyMiddleware, Store } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk, { ThunkMiddleware } from "redux-thunk";

@@ -43,14 +43,16 @@ export const Register = () => {
 	}
 
 	return (
-		<div className="w-full h-full">
-			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col">
+		<div className="w-full h-screen">
+			<div className=" max-w-screen-xl h-full mx-auto flex flex-col">
 				<div className=" mt-32 text-center text-3xl">
-					<h1 className=" text-5xl font-bold py-10">Sign up</h1>
-					Create your account
+					<h1 className=" text-5xl text-[#e8e8e8] font-extrabold py-10">
+						Sign up
+					</h1>
+					<h3 className="text-[#e8e8e8] py-4">Create your account</h3>
 				</div>
 				<form
-					className="flex flex-col justify-center align-middle py-2"
+					className="flex flex-col justify-center align-middle  py-2"
 					onSubmit={onSubmit}
 				>
 					<input
@@ -87,7 +89,7 @@ export const Register = () => {
 						onChange={onChange}
 					/>
 					<button
-						className=" flex justify-center items-center rounded-sm bg-slate-500 text-white border-2 w-24 h-10"
+						className=" flex justify-center items-center rounded-3xl bg-[#54a7ff] hover:scale-105  w-24 h-10"
 						type="submit"
 					>
 						Sign Up
@@ -97,13 +99,5 @@ export const Register = () => {
 		</div>
 	);
 };
-
-// const mapDispatchToProps = (dispatch: Dispatch<ActionTypes>) => ({
-// 	setAlert: () => dispatch(setAlert()),
-// });
-
-// connector = connect(mapDispatchToProps);
-
-// type RegisterProps = ConnectedProps<typeof connector>;
 
 export default Register;

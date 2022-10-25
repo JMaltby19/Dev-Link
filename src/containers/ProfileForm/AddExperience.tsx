@@ -41,14 +41,15 @@ export const AddExperience = () => {
 	return (
 		<div className="w-full h-full">
 			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col mt-24">
-				<div className="flex flex-col justify-center items-center">
-					<h1>Add an Experience</h1>
+				<div className="flex flex-col justify-center items-center text-[#e8e8e8]">
+					<h1 className="text-lg font-medium">Add Experience</h1>
 					<p>Add any developer experiences you may have had</p>
 					<small>* required field</small>
 					<form
 						onSubmit={onSubmit}
-						className="flex flex-col justify-center align-middle py-2 w-3/5"
+						className="flex flex-col justify-center align-middle py-2 w-3/5 text-black"
 					>
+						<small className="text-[#e8e8e8] py-2">*Title</small>
 						<input
 							type="text"
 							placeholder="Title"
@@ -57,6 +58,8 @@ export const AddExperience = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">*Company</small>
+
 						<input
 							type="text"
 							placeholder="Company"
@@ -65,6 +68,8 @@ export const AddExperience = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
+						<small className="text-[#e8e8e8] py-2">Location</small>
+
 						<input
 							type="text"
 							placeholder="Location"
@@ -73,7 +78,7 @@ export const AddExperience = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
-						<h3>From Date</h3>
+						<small className="text-[#e8e8e8] py-2"> *From Date</small>
 						<input
 							type="date"
 							placeholder="From"
@@ -82,7 +87,7 @@ export const AddExperience = () => {
 							onChange={onChange}
 							className="block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl"
 						/>
-						<p>
+						<p className="text-[#e8e8e8] py-2">
 							<input
 								type="checkbox"
 								name="current"
@@ -94,7 +99,6 @@ export const AddExperience = () => {
 							/>{" "}
 							Current job
 						</p>
-						<h3>To Date</h3>
 						<input
 							type="date"
 							placeholder="To"
@@ -108,6 +112,8 @@ export const AddExperience = () => {
 									: " text-slate-300 block border-4 rounded-lg text-xl my-2 py-1 px-2 shadow-md focus:shadow-2xl "
 							}
 						/>
+						<small className="text-[#e8e8e8] py-2">Job Description</small>
+
 						<textarea
 							name="description"
 							placeholder="Job description"
@@ -118,7 +124,7 @@ export const AddExperience = () => {
 
 						<button
 							type="submit"
-							className="flex justify-center items rounded-sm my-2 py-2 mx-2 bg-slate-500 text-white border-2 w-32 h-12"
+							className="flex justify-center items rounded-3xl my-2 py-2 mx-2  bg-[#54a7ff] hover:bg-[#54a7ff78] w-32 h-10"
 						>
 							Save
 						</button>

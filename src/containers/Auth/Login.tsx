@@ -16,9 +16,6 @@ export const Login = () => {
 	const dispatch = useAppDispatch();
 
 	const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
-	// const isAuthenticated = useSelector<RootState, RootState["auth"]>(
-	// 	(state) => state.auth
-	// );
 
 	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setFormData((prevState) => ({
@@ -40,8 +37,10 @@ export const Login = () => {
 		<div className="w-full h-full">
 			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col">
 				<div className=" mt-32 text-center text-3xl">
-					<h1 className=" text-5xl font-bold py-10">Sign In</h1>
-					Sign into your account
+					<h1 className=" text-5xl text-[#e8e8e8] font-extrabold py-10">
+						Sign In
+					</h1>
+					<h3 className="text-[#e8e8e8] py-4">Sign in to your account</h3>
 				</div>
 				<form
 					className="flex flex-col justify-center align-middle py-2"
@@ -65,7 +64,7 @@ export const Login = () => {
 					/>
 
 					<button
-						className=" flex justify-center items-center rounded-sm bg-slate-500 text-white border-2 w-24 h-10"
+						className=" flex justify-center items-center  rounded-3xl bg-[#54a7ff] hover:scale-105 w-24 h-10"
 						type="submit"
 					>
 						Login
