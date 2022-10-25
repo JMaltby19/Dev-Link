@@ -42,7 +42,7 @@ export const loadUser = () => async (dispatch: Dispatch<ActionTypes>) => {
 	// if (!token) return dispatch({ type: USER_NOT_LOADED });
 
 	try {
-		const res = await axios.get<UserType>("http://localhost:6001/api/auth", {
+		const res = await axios.get<UserType>("http://dev-link-api/api/auth", {
 			headers: {
 				"Content-Type": "application/json",
 			},
@@ -69,7 +69,7 @@ export const register =
 		try {
 			// const res = await axios.post("api/users", body, config);
 			const res = await axios.post<AuthType>(
-				"http://localhost:6001/api/users",
+				"https://dev-link-api/api/users",
 				body,
 				{
 					headers: {
@@ -102,7 +102,7 @@ export const login =
 		try {
 			// const res = await axios.post("api/users", body, config);
 			const res = await axios.post<AuthType>(
-				"http://localhost:6001/api/auth/login",
+				"http://dev-link-api/api/auth/login",
 				body,
 				{
 					headers: {
