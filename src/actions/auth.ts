@@ -43,7 +43,7 @@ export const loadUser = () => async (dispatch: Dispatch<ActionTypes>) => {
 
 	try {
 		const res = await axios.get<UserType>(
-			"http://dev-link-api.onrender.com/api/auth",
+			"https://dev-link-api.onrender.com/api/auth",
 			{
 				headers: {
 					"Content-Type": "application/json",
@@ -105,7 +105,7 @@ export const login =
 		try {
 			// const res = await axios.post("api/users", body, config);
 			const res = await axios.post<AuthType>(
-				"http://dev-link-api.onrender.com/api/auth/login",
+				"https://dev-link-api.onrender.com/api/auth/login",
 				body,
 				{
 					headers: {

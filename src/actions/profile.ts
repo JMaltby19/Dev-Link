@@ -32,7 +32,7 @@ export const getCurrentProfile =
 	() => async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.get(
-				"http://dev-link-api.onrender.com/api/profile/me"
+				"https://dev-link-api.onrender.com/api/profile/me"
 			);
 
 			dispatch({
@@ -55,7 +55,9 @@ export const getCurrentProfile =
 export const getAllProfiles = () => async (dispatch: Dispatch<ActionTypes>) => {
 	dispatch({ type: CLEAR_PROFILE });
 	try {
-		const res = await axios.get("http://dev-link-api.onrender.com/api/profile");
+		const res = await axios.get(
+			"https://dev-link-api.onrender.com/api/profile"
+		);
 
 		dispatch({
 			type: GET_ALL_PROFILES,
@@ -79,7 +81,7 @@ export const getProfileById =
 		dispatch({ type: CLEAR_PROFILE });
 		try {
 			const res = await axios.get(
-				`http://dev-link-api.onrender.com/api/profile/user/${user_id}`
+				`https://dev-link-api.onrender.com/api/profile/user/${user_id}`
 			);
 
 			dispatch({
@@ -103,7 +105,7 @@ export const getGithubRepos =
 	(username: string) => async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.get<GithubRepoType[]>(
-				`http://dev-link-api.onrender.com/api/profile/github/${username}`
+				`https://dev-link-api.onrender.com/api/profile/github/${username}`
 			);
 
 			dispatch({
@@ -128,7 +130,7 @@ export const createProfile =
 	async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.post<ProfileType>(
-				"http://dev-link-api.onrender.com/api/profile",
+				"https://dev-link-api.onrender.com/api/profile",
 				data,
 				{
 					headers: {
@@ -160,7 +162,7 @@ export const addExperience =
 	(data: ExperienceType) => async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.put<ProfileType>(
-				"http://dev-link-api.onrender.com/api/profile/experience",
+				"https://dev-link-api.onrender.com/api/profile/experience",
 				data,
 				{
 					headers: {
@@ -198,7 +200,7 @@ export const addEducation =
 	(data: EducationType) => async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.put<ProfileType>(
-				"http://dev-link-api.onrender.com/api/profile/education",
+				"https://dev-link-api.onrender.com/api/profile/education",
 				data,
 				{
 					headers: {
@@ -238,7 +240,7 @@ export const deleteExperience =
 
 		try {
 			const res = await axios.delete<ProfileType>(
-				`http://dev-link-api.onrender.com/api/profile/experience/${_id}`,
+				`https://dev-link-api.onrender.com/api/profile/experience/${_id}`,
 				{
 					headers: {
 						"Content-Type": "application/json",
@@ -266,7 +268,7 @@ export const deleteEducation =
 	(_id: string | undefined) => async (dispatch: Dispatch<ActionTypes>) => {
 		try {
 			const res = await axios.delete<ProfileType>(
-				`http://dev-link-api.onrender.com/api/profile/education/${_id}`,
+				`https://dev-link-api.onrender.com/api/profile/education/${_id}`,
 				{
 					headers: {
 						"Content-Type": "application/json",
@@ -294,7 +296,7 @@ export const deleteAccount = () => async (dispatch: Dispatch<ActionTypes>) => {
 	if (window.confirm("Are you sure ? This action cannot be undone")) {
 		try {
 			await axios.delete<ProfileType>(
-				"http://dev-link-api.onrender.com/api/profile"
+				"https://dev-link-api.onrender.com/api/profile"
 			);
 			dispatch({ type: CLEAR_PROFILE });
 			dispatch({ type: ACCOUNT_DELETED });
