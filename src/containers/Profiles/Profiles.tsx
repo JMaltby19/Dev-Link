@@ -12,7 +12,7 @@ export const Profiles = () => {
 	}, [dispatch]);
 
 	return (
-		<div className="mt-0 max-w-screen-lg:mt-32">
+		<div className="mt-0 lg:mt-32">
 			{profiles.loading ? (
 				""
 			) : (
