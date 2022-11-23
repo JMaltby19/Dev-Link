@@ -73,7 +73,7 @@ export const Register = () => {
 						onChange={onChange}
 					/>
 					<input
-						type="text"
+						type="password"
 						placeholder="Password"
 						className=" block border-4 rounded-lg text-xl mb-6 py-2 px-2 shadow-md focus:shadow-2xl"
 						value={password}
@@ -81,7 +81,7 @@ export const Register = () => {
 						onChange={onChange}
 					/>
 					<input
-						type="text"
+						type="password"
 						placeholder="Confirm Password"
 						className=" block border-4 rounded-lg text-xl mb-6 py-2 px-2 shadow-md focus:shadow-2xl"
 						value={password2}
