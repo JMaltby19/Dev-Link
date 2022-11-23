@@ -16,7 +16,7 @@ export const Dashboard = () => {
 	}, [dispatch]);
 
 	return (
-		<div className="w-full h-full flex justify-center mt-32 max-w-screen-md:mt-0">
+		<div className="w-full h-full flex justify-center mt-0 max-w-screen-lg:mt-32">
 			<div className=" flex flex-col justify-center items-center text-center">
 				<h1 className=" text-4xl font-extrabold text-[#e8e8e8]">Dashboard</h1>
 				<p className=" text-2xl text-[#e8e8e8] font-semibold my-4">
