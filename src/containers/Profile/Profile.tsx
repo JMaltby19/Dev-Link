@@ -25,7 +25,7 @@ export const Profile = () => {
 	}, [dispatch, id]);
 
 	return (
-		<div className="relative mt-24">
+		<div className="relative pt-24">
 			<div className="flex justify-around font-medium text-[#A8D0E6] py-4">
 				<button>
 					<Link to="/profiles">Back to Profiles</Link>

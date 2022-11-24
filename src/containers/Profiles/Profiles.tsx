@@ -12,12 +12,12 @@ export const Profiles = () => {
 	}, [dispatch]);
 
 	return (
-		<div className="mt-0 lg:mt-32">
+		<div className="">
 			{profiles.loading ? (
 				""
 			) : (
-				<div className="text-[#e8e8e8] text-center">
-					<h1 className=" text-4xl font-extrabold my-4">Developers</h1>
+				<div className="text-[#e8e8e8] text-center pt-32 ">
+					<h1 className=" text-4xl font-extrabold mb-4">Developers</h1>
 					<div>
 						{profiles.profiles.length > 0 ? (
 							profiles.profiles.map((profile) => (

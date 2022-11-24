@@ -40,10 +40,12 @@ export const AddExperience = () => {
 
 	return (
 		<div className="w-full h-full">
-			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col mt-24">
+			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col pt-24">
 				<div className="flex flex-col justify-center items-center text-[#e8e8e8]">
 					<h1 className="text-lg font-medium">Add Experience</h1>
-					<p>Add any developer experiences you may have had</p>
+					<p className="text-center">
+						Add any developer experiences you may have had
+					</p>
 					<small>* required field</small>
 					<form
 						onSubmit={onSubmit}

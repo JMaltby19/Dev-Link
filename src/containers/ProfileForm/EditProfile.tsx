@@ -80,10 +80,10 @@ export const EditProfile = () => {
 
 	return (
 		<div className="w-full h-full">
-			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col mt-24">
+			<div className=" max-w-screen-xl mx-auto w-full h-full flex flex-col pt-24">
 				<div className="flex flex-col justify-center items-center text-[#e8e8e8]">
 					<h1 className="text-lg font-medium">Create your Profile</h1>
-					<p>
+					<p className=" text-center">
 						Please enter your details below and lets help make your profile
 						stand out!
 					</p>
